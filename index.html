@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayeesha — Lobby</title>
+  <meta name="description" content="Portfolio of Ayeesha, Electrical Engineering student. Take the lift to explore About, Projects and Contact.">
+  <meta name="theme-color" content="#1b1d21">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>try{if(sessionStorage.getItem("lift-arriving"))document.documentElement.classList.add("arriving")}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&family=Share+Tech+Mono&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page pageHome" data-floor="G">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="iArrowLeft" viewBox="0 0 24 24"><path d="M21 12H3M10 5l-7 7 7 7"/></symbol>
+  <symbol id="iArrowRight" viewBox="0 0 24 24"><path d="M3 12h18M14 5l7 7-7 7"/></symbol>
+  <symbol id="iChevronUp" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+  <symbol id="iChevronDown" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="iChevronRight" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="iMail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="iChip" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+  <symbol id="iUser" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="iHome" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  </svg>
+  <div class="transition" aria-hidden="true">
+    <span class="transitionDoor transitionDoorL"></span>
+    <span class="transitionDoor transitionDoorR"></span>
+  </div>
+
+  <header class="siteHeader">
+    <nav class="nav" aria-label="Primary">
+      <a class="navLogo" href="index.html" data-lift aria-current="page">A YEES</a>
+      <ul class="navMenu">
+        <li><a href="about.html" data-lift>About</a></li>
+        <li><a href="projects.html" data-lift>Projects</a></li>
+        <li><a href="contact.html" data-lift>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <div class="indicator" role="img" aria-label="Current floor: Ground">
+      <div class="indicatorScreen">
+        <svg class="icon indicatorArrow" viewBox="0 0 26 18" aria-hidden="true"><path d="m4 14 9-9 9 9"/></svg>
+        <span class="indicatorFloor">G</span>
+      </div>
+    </div>
+
+    <section class="lift" aria-label="Lift">
+      <div class="doors" id="doors" title="Click to open or close the doors">
+        <div class="door doorL">
+          <p class="doorLabel">Portofolio / 2026</p>
+          <h1 class="doorTitle">Hi, I’m Ayeesha!</h1>
+          <svg class="icon doorArrow" width="24" height="24" aria-hidden="true" ><use href="#iArrowLeft"/></svg>
+        </div>
+        <div class="door doorR">
+          <span class="tag doorTag">EE Student</span>
+          <p class="doorPress">Press
+            <svg viewBox="0 0 20 15" aria-label="up" role="img"><path d="M10 0 20 15H0Z"/></svg>
+            to enter</p>
+          <svg class="icon doorArrow" width="24" height="24" aria-hidden="true" ><use href="#iArrowRight"/></svg>
+        </div>
+        <div class="doorsFrame"></div>
+      </div>
+      
+      <div class="panelButtons" role="group" aria-label="Lift buttons">
+        <button class="liftBtn liftBtnUp" id="btnUp" data-target="about.html" aria-label="Go up to floor 1, About">
+          <svg class="icon" width="26" height="26" aria-hidden="true" ><use href="#iChevronUp"/></svg>
+        </button>
+        <button class="liftBtn liftBtnDown" disabled aria-label="Go down (you are on the ground floor)">
+          <svg class="icon" width="26" height="26" aria-hidden="true" ><use href="#iChevronDown"/></svg>
+        </button>
+      </div>
+    </section>
+    
+    <div class="statusbar" style="margin-top:50px">
+      <span class="tag">CAPACITY: 3 FLOORS - 4 PROJECTS</span>
+      <span>INSPECTED: OCT 2026</span>
+    </div>
+
+    <nav class="directory" aria-label="Floor directory">
+      <div class="directoryHead"><span>Floor directory</span><span>You are here: G</span></div>
+      <a class="directoryRow" href="contact.html" data-lift aria-label="Floor 3: Contact">
+        <span class="directoryNum">3</span>
+        <svg class="icon" width="28" height="28" aria-hidden="true" ><use href="#iMail"/></svg>
+        <span class="directoryName">Contact</span>
+        <span class="directoryDesc">Email · LinkedIn · GitHub</span>
+        <svg class="icon directoryChev" width="22" height="22" aria-hidden="true" ><use href="#iChevronRight"/></svg>
+      </a>
+      <a class="directoryRow" href="projects.html" data-lift aria-label="Floor 2: Projects">
+        <span class="directoryNum">2</span>
+        <svg class="icon" width="28" height="28" aria-hidden="true" ><use href="#iChip"/></svg>
+        <span class="directoryName">Projects</span>
+        <span class="directoryDesc">Rooms 201 › 204</span>
+        <svg class="icon directoryChev" width="22" height="22" aria-hidden="true" ><use href="#iChevronRight"/></svg>
+      </a>
+      <a class="directoryRow" href="about.html" data-lift aria-label="Floor 1: About">
+        <span class="directoryNum">1</span>
+        <svg class="icon" width="28" height="28" aria-hidden="true" ><use href="#iUser"/></svg>
+        <span class="directoryName">About</span>
+        <span class="directoryDesc">Bio · Skills · Education</span>
+        <svg class="icon directoryChev" width="22" height="22" aria-hidden="true" ><use href="#iChevronRight"/></svg>
+      </a>
+      <div class="directoryRow isHere" aria-current="location">
+        <span class="directoryNum">G</span>
+        <svg class="icon" width="28" height="28" aria-hidden="true" ><use href="#iHome"/></svg>
+        <span class="directoryName">Lobby</span>
+        <span class="directoryDesc">You are here</span>
+        <span class="directoryNow">Now</span>
+      </div>
+    </nav>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
