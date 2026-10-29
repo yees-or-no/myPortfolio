@@ -267,7 +267,7 @@ svg.indicatorArrow {
   bottom: 0;
   width: 50%;
   background: var(--silver);
-  color: var(--bg);
+  color: var(--ink);
   transition: transform 0.7s var(--ease);
 }
 
@@ -1052,6 +1052,17 @@ html.arriving .transitionDoor {
     height: 88px;
     font-size: 44px;
   }
+
+  .projectHead {
+    flex-direction: column-reverse;   
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .projectHead .tag {
+    white-space: normal;        
+    text-align: left;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1060,23 +1071,24 @@ html.arriving .transitionDoor {
   }
 
   .nav {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;       
+    flex-wrap: wrap;           
+    justify-content: space-between;
+    gap: 8px 12px;
     padding: 12px 8px;
   }
 
   .navLogo {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .navMenu {
-    gap: 24px;
+    gap: 14px;
   }
 
   .navMenu a {
-    font-size: 18px;
+    font-size: 14px;
   }
-
   .stage {
     padding: 0 12px 24px;
   }
@@ -1108,49 +1120,52 @@ html.arriving .transitionDoor {
     font-size: 16px;
   }
 
-  .doorTag {
-    width: auto;
-    padding: 6px 10px;
-  }
-
   .doorLabel,
   .doorTitle {
-    left: 18px;
+    left: 32px;
   }
 
   .doorLabel {
-    top: 36px;
-    width: 120px;
+    top: 44px;
+    width: 110px;
+    font-size: 14px;
   }
 
   .doorTitle {
-    top: 110px;
-    width: 130px;
-    font-size: 28px;
+    top: 118px;
+    width: 110px;
+    font-size: 24px;
+  }
+
+  .doorTag {
+    top: 44px;
+    right: 32px;
   }
 
   .doorPress {
-    right: 18px;
-    top: 200px;
-    width: 110px;
-    flex-wrap: wrap;
+    right: 32px;
+    width: 100px;
+    flex-wrap: wrap;           
     justify-content: flex-end;
     white-space: normal;
     text-align: right;
     gap: 6px;
   }
 
-  svg.doorArrow {
-    bottom: 24px;
+  .doorPress svg {
+    flex: none;
   }
 
-  svg.doorL .doorArrow,
+  svg.doorArrow {
+    bottom: 32px;
+  }
+
   .doorL svg.doorArrow {
-    left: 18px;
+    left: 32px;
   }
 
   .doorR svg.doorArrow {
-    right: 18px;
+    right: 32px;
   }
 
   .directoryHead {
